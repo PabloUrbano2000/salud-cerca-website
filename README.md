@@ -7,6 +7,8 @@ Maqueta responsive para la gestión de citas médicas, construida con React, Vit
 ```bash
 npm install
 npm run dev
+# o bien
+npm run start
 ```
 
 Para comprobar el proyecto antes de publicar:
