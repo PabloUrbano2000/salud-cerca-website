@@ -1,0 +1,11 @@
+import { Link, useParams } from 'react-router'
+import AppShell from '../components/AppShell'
+import { doctors, slots } from '../data/mockData'
+
+function DoctorProfilePage() {
+  const { id } = useParams()
+  const doctor = doctors.find((item) => item.id === id) ?? doctors[0]
+  return <AppShell role="patient"><Link className="text-sm font-medium text-cyan-700" to="/paciente">← Volver a especialistas</Link><section className="mt-5 grid gap-6 lg:grid-cols-[1.5fr_0.8fr]"><article className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"><div className="flex flex-wrap gap-5"><div className={`grid size-20 place-items-center rounded-full text-2xl font-bold ${doctor.color}`}>{doctor.name.split(' ').at(-1)?.[0]}</div><div><p className="text-sm font-semibold text-cyan-700">{doctor.specialty}</p><h1 className="mt-1 text-3xl font-semibold text-slate-900">{doctor.name}</h1><p className="mt-2 text-slate-500">★ {doctor.rating} · {doctor.experience}</p><p className="mt-2 text-slate-500">⌖ Consultorio en {doctor.location}</p></div></div><div className="mt-8 border-t border-slate-100 pt-6"><h2 className="text-lg font-semibold">Sobre la especialista</h2><p className="mt-3 leading-7 text-slate-600">Atención médica cercana y personalizada. Esta información es referencial y forma parte de la maqueta.</p></div><div className="mt-8"><h2 className="text-lg font-semibold">Especialidades de atención</h2><div className="mt-3 flex flex-wrap gap-2"><span className="rounded-full bg-cyan-50 px-3 py-1.5 text-sm text-cyan-800">Consulta presencial</span><span className="rounded-full bg-cyan-50 px-3 py-1.5 text-sm text-cyan-800">Consulta virtual</span></div></div></article><aside className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"><p className="font-semibold text-slate-900">Horarios disponibles</p><p className="mt-1 text-sm text-slate-500">Hoy, 21 de septiembre</p><div className="mt-5 grid grid-cols-2 gap-2">{slots.slice(0, 4).map((slot) => <span className="rounded-lg border border-cyan-200 bg-cyan-50 px-2 py-2 text-center text-sm font-medium text-cyan-800" key={slot}>{slot}</span>)}</div><Link className="mt-6 block rounded-xl bg-cyan-600 px-4 py-3 text-center font-semibold text-white hover:bg-cyan-700" to={`/reserva/${doctor.id}`}>Reservar cita</Link></aside></section></AppShell>
+}
+
+export default DoctorProfilePage
