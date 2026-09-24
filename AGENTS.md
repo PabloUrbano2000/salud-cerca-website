@@ -20,20 +20,22 @@ Presentar el flujo de una plataforma de citas médicas: acceso como paciente o d
 
 Cada flujo se construye únicamente a nivel visual e interactivo del cliente, usando información ficticia. No incluye servicios, autenticación real, validaciones ni manejo de errores.
 
-1. Registro e inicio de sesión de pacientes: pantalla compartida de correo y contraseña, con selector de rol.
-2. Registro e inicio de sesión de doctores: el mismo acceso compartido, con entrada al área de doctor.
-3. Perfil del doctor: datos profesionales, especialidad, ubicación y presentación de disponibilidad.
-4. Categorización de doctores por especialidad: categorías y listado filtrable de especialistas.
-5. Búsqueda de doctores por especialidad y ubicación.
-6. Visualización de horarios disponibles por doctor.
-7. Reserva de cita: selección de profesional, fecha y hora, seguida de una confirmación visual.
-8. Configuración semanal del pool de horarios: vista del doctor para mostrar y editar bloques de disponibilidad simulados.
-9. Inicio de paciente y panel básico de doctor para conectar los recorridos anteriores.
+1. Homepage pública de SaludCerca: portada, especialidades destacadas y llamadas a la acción.
+2. Registro e inicio de sesión de pacientes: pantalla compartida de correo y contraseña, con selector de rol. El paciente puede explorar especialistas, perfiles y horarios sin iniciar sesión; la reserva exige una sesión simulada.
+3. Registro e inicio de sesión de doctores: el mismo acceso compartido, con entrada al área de doctor.
+4. Perfil del doctor: datos profesionales, especialidad, ubicación y presentación de disponibilidad.
+5. Categorización de doctores por especialidad: categorías y listado filtrable de especialistas.
+6. Búsqueda de doctores por especialidad y ubicación.
+7. Visualización de horarios disponibles por doctor.
+8. Reserva de cita: selección de profesional, fecha y hora, seguida de una confirmación visual.
+9. Configuración semanal del pool de horarios: vista del doctor para mostrar y editar bloques de disponibilidad simulados.
+10. Inicio de paciente y panel básico de doctor para conectar los recorridos anteriores.
 
 ## Rutas de la maqueta
 
-- `/login`: acceso y selección de rol.
-- `/paciente`: inicio del paciente.
+- `/`: homepage pública de SaludCerca.
+- `/login`: acceso y selección de rol, requerido para reservar o entrar como doctor.
+- `/paciente`: inicio público del paciente.
 - `/doctor`: inicio del doctor.
 
 Usar React Router en modo declarativo para la navegación del cliente. Las rutas no dependen de autenticación ni de servicios de servidor.

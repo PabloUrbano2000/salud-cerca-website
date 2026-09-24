@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate, useSearchParams } from 'react-router'
+import { setMockRole } from '../lib/mockSession'
 
 type UserRole = 'patient' | 'doctor'
 
@@ -20,10 +21,13 @@ function Logo() {
 function LoginPage() {
   const [role, setRole] = useState<UserRole>('patient')
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const nextPage = searchParams.get('next')
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    navigate(role === 'patient' ? '/paciente' : '/doctor')
+    setMockRole(role)
+    navigate(role === 'patient' && nextPage ? nextPage : role === 'patient' ? '/paciente' : '/doctor')
   }
 
   return (
@@ -34,7 +38,7 @@ function LoginPage() {
         <div className="my-12 lg:my-0">
           <p className="mb-3 text-sm font-semibold tracking-wide text-cyan-700">BIENVENIDO</p>
           <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Ingresa a tu cuenta</h1>
-          <p className="mt-3 text-base leading-7 text-slate-600">Accede para gestionar tus citas médicas de forma sencilla.</p>
+          <p className="mt-3 text-base leading-7 text-slate-600">{nextPage ? 'Ingresa para confirmar y guardar tu cita médica.' : 'Accede para gestionar tus citas médicas de forma sencilla.'}</p>
 
           <form className="mt-8" onSubmit={handleSubmit}>
             <fieldset>
