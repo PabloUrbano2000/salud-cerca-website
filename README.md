@@ -1,4 +1,4 @@
-# SaludCerca
+# Medimatch
 
 Maqueta responsive para la gestión de citas médicas, construida con React, Vite, Tailwind CSS y React Router. No incluye backend ni datos reales.
 
@@ -34,7 +34,6 @@ Este proyecto no necesita Wrangler para el despliegue automático. Cloudflare Pa
 
 3. En Cloudflare, abre **Workers & Pages** y selecciona **Create application → Pages → Import an existing Git repository**.
 4. Selecciona el repositorio y configura:
-
    - Production branch: `main`
    - Build command: `npm run build`
    - Build output directory: `dist`
