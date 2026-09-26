@@ -85,7 +85,7 @@ function HomePage() {
           ¿Eres profesional de la salud?
         </h2>
         <p className="mt-3 text-slate-600">
-          Gestiona tu perfil, disponibilidad y agenda desde Medimatch.
+          Gestiona tu perfil, disponibilidad y agenda desde SaludConecta.
         </p>
         <Link
           className="mt-6 inline-block font-semibold text-cyan-700 hover:text-cyan-800"

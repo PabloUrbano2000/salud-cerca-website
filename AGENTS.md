@@ -20,7 +20,7 @@ Presentar el flujo de una plataforma de citas médicas: acceso como paciente o d
 
 Cada flujo se construye únicamente a nivel visual e interactivo del cliente, usando información ficticia. No incluye servicios, autenticación real, validaciones ni manejo de errores.
 
-1. Homepage pública de Medimatch: portada, especialidades destacadas y llamadas a la acción.
+1. Homepage pública de SaludConecta: portada, especialidades destacadas y llamadas a la acción.
 2. Registro e inicio de sesión de pacientes: pantalla compartida de correo y contraseña, con selector de rol. El paciente puede explorar especialistas, perfiles y horarios sin iniciar sesión; la reserva exige una sesión simulada.
 3. Registro e inicio de sesión de doctores: el mismo acceso compartido, con entrada al área de doctor.
 4. Perfil del doctor: datos profesionales, especialidad, ubicación y presentación de disponibilidad.
@@ -33,7 +33,7 @@ Cada flujo se construye únicamente a nivel visual e interactivo del cliente, us
 
 ## Rutas de la maqueta
 
-- `/`: homepage pública de Medimatch.
+- `/`: homepage pública de SaludConecta.
 - `/login`: acceso y selección de rol, requerido para reservar o entrar como doctor.
 - `/paciente`: inicio público del paciente.
 - `/doctor`: inicio del doctor.

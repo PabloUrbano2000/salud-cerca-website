@@ -23,7 +23,7 @@ function Logo() {
       <div className="grid size-10 place-items-center rounded-xl bg-cyan-600 text-xl font-semibold text-white shadow-sm">
         +
       </div>
-      <span className="text-xl font-semibold tracking-tight">Medimatch</span>
+      <span className="text-xl font-semibold tracking-tight">SaludConecta</span>
     </div>
   );
 }
@@ -142,7 +142,7 @@ function LoginPage() {
         </div>
 
         <p className="text-sm text-slate-500">
-          © 2026 Medimatch. Tu salud, más cerca.
+          © 2026 SaludConecta. Tu salud, más cerca.
         </p>
       </section>
 

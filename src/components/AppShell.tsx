@@ -11,7 +11,7 @@ function Brand() {
       <span className="grid size-8 place-items-center rounded-lg bg-cyan-600 text-lg text-white">
         +
       </span>
-      Medimatch
+      SaludConecta
     </Link>
   );
 }
@@ -76,7 +76,7 @@ function AppShell({ children, role }: AppShellProps) {
         {children}
       </main>
       <footer className="mx-auto max-w-7xl px-5 pb-8 text-sm text-slate-400 sm:px-8">
-        © 2026 Medimatch
+        © 2026 SaludConecta
       </footer>
     </div>
   );

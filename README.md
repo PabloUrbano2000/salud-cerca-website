@@ -1,4 +1,4 @@
-# Medimatch
+# SaludConecta
 
 Maqueta responsive para la gestión de citas médicas, construida con React, Vite, Tailwind CSS y React Router. No incluye backend ni datos reales.
 
